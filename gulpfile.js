@@ -24,7 +24,6 @@ gulp.task('javascript', function () {
     .pipe(buffer())
     .pipe(sourcemaps.init({loadMaps: true}))
       // Add gulp plugins to the pipeline here.
-      .pipe(uglify())
       .on('error', gutil.log)
     .pipe(sourcemaps.write('./'))
     .pipe(gulp.dest('./dist/js/'));
